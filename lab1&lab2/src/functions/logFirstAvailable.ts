@@ -1,4 +1,4 @@
-import CustomWorker from "../interfaces";
+import {CustomWorker} from "../interfaces";
 
 import getAllWorkers from "./getAllWorkers";
 
