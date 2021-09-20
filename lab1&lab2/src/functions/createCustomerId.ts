@@ -1,5 +1,5 @@
 import { Category } from "../enums"
-import CustomWorker from "../interfaces"
+import {CustomWorker} from "../interfaces"
 
 export const createCustomerId: (customerName: string, customerId: number) => string = function (
   customerName: string,

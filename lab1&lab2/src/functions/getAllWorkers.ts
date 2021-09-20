@@ -1,4 +1,4 @@
-import CustomWorker from "../interfaces";
+import {CustomWorker} from "../interfaces";
 import { Category } from "../enums";
 
 export default function getAllWorkers(): CustomWorker[] {

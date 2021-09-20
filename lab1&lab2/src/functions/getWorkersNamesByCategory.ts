@@ -1,5 +1,5 @@
 import {Category} from '../enums';
-import CustomWorker from '../interfaces';
+import {CustomWorker} from '../interfaces';
 
 export default function getWorkersNamesByCategory(workers: CustomWorker[], category = Category.Designer): string[] | void {
   return workers
