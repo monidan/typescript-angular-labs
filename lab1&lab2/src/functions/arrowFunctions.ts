@@ -1,5 +1,5 @@
 import { Category } from '../enums';
-import CustomWorker from '../interfaces';
+import {CustomWorker} from '../interfaces';
 
 export const logDevs = (workers: CustomWorker[]): void => {
   workers.forEach((worker: CustomWorker) => {

@@ -10,8 +10,12 @@ import { createCustomerId } from './functions/createCustomerId';
 import createCustomer from './functions/createCustomer';
 import checkoutWorkers from './functions/checkoutWorkers';
 
+import logPrize from './functions/prizeLogger'; 
+
+import { UniversityLibrarian, ReferenceItem, Encyclopedia } from './playground/classes';
+
 import { Category } from './enums';
-import CustomWorker from './interfaces';
+import {CustomWorker, Librarian} from './interfaces';
 
 // ! 1.1
 // logFirstAvailable(getAllWorkers());
@@ -36,17 +40,40 @@ import CustomWorker from './interfaces';
 // })()
 
 // ! 1.5
-(function() {
-  createCustomer('Daniel');
-  createCustomer('Daniel', 19);
-  createCustomer('Daniel', 19, 'Kyiv');
+// (function() {
+//   createCustomer('Daniel');
+//   createCustomer('Daniel', 19);
+//   createCustomer('Daniel', 19, 'Kyiv');
 
-  console.log(getWorkersNamesByCategory(getAllWorkers()));
-  logFirstAvailable();
+//   console.log(getWorkersNamesByCategory(getAllWorkers()));
+//   logFirstAvailable();
   
-  const myWorkers = checkoutWorkers('Ann', 1, 2, 4);
+//   const myWorkers = checkoutWorkers('Ann', 1, 2, 4);
 
-  myWorkers.forEach((worker: {name: string, surname: string}, index) => {
-      console.log(`${index + 1}. Worker ${worker.name} ${worker.surname}`);
-  })
-})()
+//   myWorkers.forEach((worker: {name: string, surname: string}, index) => {
+//       console.log(`${index + 1}. Worker ${worker.name} ${worker.surname}`);
+//   })
+// })()
+
+// ! 2.2
+
+// logPrize('million dollars');
+
+// ! 2.4
+
+// const favoriteLibrarian: Librarian = new UniversityLibrarian('Daniel', 'horokhov@gmail.com', 'Tech Science');
+
+// favoriteLibrarian.assistCustomer('Katie');
+
+// ! 2.5
+
+// const ref = new ReferenceItem('Forbes', 2021);
+
+// ref.printItem();
+// ref.publisher = 'value';
+// console.log(ref.publisher)
+
+// ! 2.6
+
+const refBook = new Encyclopedia(12, 'title', 2021);
+refBook.printItem();
