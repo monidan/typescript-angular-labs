@@ -11,6 +11,7 @@ import createCustomer from './functions/createCustomer';
 import checkoutWorkers from './functions/checkoutWorkers';
 
 import logPrize from './functions/prizeLogger'; 
+import printWorker from './functions/printWorker';
 
 import { UniversityLibrarian, ReferenceItem, Encyclopedia } from './playground/classes';
 
@@ -25,6 +26,7 @@ import {CustomWorker, Librarian} from './interfaces';
 
 // ! 1.3
 // console.log(getWorkerById(getAllWorkers(), 2));
+// console.log('---------------');
 
 // ! 1.4
 // (function() {
@@ -37,6 +39,7 @@ import {CustomWorker, Librarian} from './interfaces';
 
 //   console.log('My Id: ', myID);
 //   console.log('Id generator:', idGenerator('Daniel', 12))
+//   console.log('---------------');
 // })()
 
 // ! 1.5
@@ -55,15 +58,22 @@ import {CustomWorker, Librarian} from './interfaces';
 //   })
 // })()
 
+// ! 2.1
+
+printWorker(getAllWorkers()[0]);
+console.log('-------------------');
+
 // ! 2.2
 
-// logPrize('million dollars');
+logPrize('million dollars');
+console.log('-------------------');
 
 // ! 2.4
 
-// const favoriteLibrarian: Librarian = new UniversityLibrarian('Daniel', 'horokhov@gmail.com', 'Tech Science');
+const favoriteLibrarian: Librarian = new UniversityLibrarian('Daniel', 'horokhov@gmail.com', 'Tech Science');
 
-// favoriteLibrarian.assistCustomer('Katie');
+favoriteLibrarian.assistCustomer('Katie');
+console.log('-------------------');
 
 // ! 2.5
 
@@ -73,7 +83,12 @@ import {CustomWorker, Librarian} from './interfaces';
 // ref.publisher = 'value';
 // console.log(ref.publisher)
 
+// console.log('-------------------');
+
+
 // ! 2.6
 
 const refBook = new Encyclopedia(12, 'title', 2021);
 refBook.printItem();
+
+console.log('-------------------');

@@ -1,5 +1,3 @@
-import {CustomWorker} from "../interfaces";
-
 import getAllWorkers from "./getAllWorkers";
 
 export default function logFirstAvailable(workers = getAllWorkers()): void {
