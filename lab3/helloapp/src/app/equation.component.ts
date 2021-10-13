@@ -49,7 +49,6 @@ export class CountEquation {
 
   solveEquation() {
     this.d = Math.pow(Number(this.b), 2) - 4 * Number(this.a) * Number(this.c);
-    console.log('hello')
 
     if (this.d < 0 || !Number(this.a)) {
       this.isEquationHasRoots = false;
