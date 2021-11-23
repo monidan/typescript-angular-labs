@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar class="ion-justify-content-around">
+    <ion-title>Info</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          {{ data.name }}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ul>
+          <li>
+            temperature
+            <ion-badge>
+              {{ (data.main.temp - 273.15).toFixed(2) }}
+            </ion-badge>
+          </li>
+          <li>
+            weather
+            <ion-badge>
+              {{ data.weather[0].main }}
+            </ion-badge>
+          </li>
+          <li>
+            wind speed
+            <ion-badge>
+              {{ data.wind.speed }}
+            </ion-badge>
+          </li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+</ion-content>
