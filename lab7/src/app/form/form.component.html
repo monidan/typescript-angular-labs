@@ -1,0 +1,36 @@
+<div class="form">
+  <form [formGroup]="signUpForm" (ngSubmit)="validateInputs($event)">
+    <label for="name">
+      <span>Ваше имя:</span>
+      <input type="text" id="name" formControlName="name" class="border border-blue-300">
+      <p *ngIf="signUpForm.controls.name.status === 'INVALID'"  class="text-red-600">Ошибка, введите имя!</p>
+    </label>
+    <label for="phone">
+      <span>Номер телефона:</span>
+      <input type="text" id="phone" formControlName="phone" class="border border-blue-300">
+      <p *ngIf="signUpForm.controls.phone.status === 'INVALID'" class="text-red-600">Ошибка, введите правильный номер телефона!</p>
+    </label>
+    <label for="email">
+      <span>Ваш E-mail:</span>
+      <input type="text" id="email" formControlName="email" class="border border-blue-300">
+      <p *ngIf="signUpForm.controls.email.status === 'INVALID'" class="text-red-600">Ошибка, введите правильную почту!</p>
+    </label>
+    <label for="money">
+      <span>Сумма (грн.):</span>
+      <input type="text" id="money" formControlName="money" class="border border-blue-300">
+      <p *ngIf="signUpForm.controls.money.status === 'INVALID'" class="text-red-600">Ошибка, введите сумму!</p>
+    </label>
+    <label for="message">
+      <span>Сообщение:</span>
+      <textarea name="message" id="message" formControlName="message" cols="30" rows="10" class="border border-blue-300"></textarea>
+      <p *ngIf="signUpForm.controls.message.status === 'INVALID'" class="text-red-600">Ошибка, введите сообщение, которое хотите оставить!</p>
+    </label>
+    <input type="submit" value="Submit" class="border cursor-pointer border-blue-500 rounded py-2 uppercase font-bold">
+    <p *ngIf="isFormPostError" class="form-error text-red-600 text-center">Ошибка! Заполните правильно форму!</p>
+  </form>
+  <div>
+    <h1 *ngIf="isFormSent" class="form-success text-center">
+      Form was sent!
+    </h1>
+  </div>
+</div>
